@@ -13,7 +13,6 @@ func addContextMiddleware(next http.Handler) http.Handler {
 		log.Println(r.Method, "-", r.RequestURI)
 		cookie, _ := r.Cookie("username")
 		if cookie != nil {
-			//Add data to context
 			ctx := context.WithValue(r.Context(), "Username", cookie.Value)
 			next.ServeHTTP(w, r.WithContext(ctx))
 		} else {

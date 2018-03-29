@@ -42,9 +42,9 @@ func (jd JSONDog) Dog() Dog {
 	}
 }
 
-// func (d Dog) MarshalJSON() ([]byte, error) {
-// 	return json.Marshal(NewJSONDog(d))
-// }
+func (d Dog) MarshalJSON() ([]byte, error) {
+	return json.Marshal(NewJSONDog(d))
+}
 
 func NewJSONDog(dog Dog) JSONDog {
 	return JSONDog{
