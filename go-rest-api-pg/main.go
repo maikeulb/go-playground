@@ -3,7 +3,7 @@ package main
 import "os"
 
 func main() {
-	a := app.App{}
+	a := App{}
 	a.Initialize(
 		os.Getenv("DB_HOST"),
 		os.Getenv("DB_PORT"),
